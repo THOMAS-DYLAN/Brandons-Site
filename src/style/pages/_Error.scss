@@ -1,0 +1,23 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+.error{
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  .errorTitle{
+    margin-top: 5%;
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+  }
+  .errorDesc{
+    font-weight: 100;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+}

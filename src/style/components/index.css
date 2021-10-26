@@ -1,0 +1,159 @@
+nav {
+  background: #2e8ab8;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+nav .nav-center {
+  width: 100%;
+}
+nav .nav-center .nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav .nav-center .hamburger {
+  background: transparent;
+  font-size: 1.5rem;
+  color: black;
+  border-color: transparent;
+  transition: 0.5s;
+  margin-left: 15vw;
+}
+nav .nav-center .hamburger:hover {
+  transform: rotate(450deg);
+}
+nav .nav-center .logo {
+  height: 20px;
+  width: 20px;
+  display: initial;
+}
+nav .nav-center .companyName {
+  font-size: 20px;
+}
+nav .nav-center .pageDiv {
+  height: 0;
+  overflow: hidden;
+}
+nav .nav-center .pageDiv.showing {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+nav .nav-center .pageDiv .pages li {
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 2rem;
+  transition: all 0.5s linear;
+  position: relative;
+}
+nav .nav-center .pageDiv .pages li a {
+  color: white;
+  text-decoration: none;
+}
+nav .nav-center .pageDiv .pages li a:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  color: #222;
+  font-weight: bold;
+}
+nav .nav-center .pageDiv .pages li:hover {
+  background: #c5cfd8;
+  padding-left: 1.5rem;
+  width: 50%;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  color: black;
+  font-weight: bold;
+  transition: 0.3 ease all;
+}
+nav .nav-center .pageDiv .pages li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #6c859d;
+}
+
+@media only screen and (min-width: 769px) {
+  nav {
+    width: 100%;
+    margin-right: 0.5%;
+  }
+  nav .nav-center {
+    width: 98%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  nav .nav-center margin {
+    left: auto;
+    right: auto;
+  }
+  nav .nav-center .nav-head {
+    padding: 0;
+  }
+  nav .nav-center .hamburger {
+    display: none;
+  }
+  nav .nav-center .logo {
+    height: 40px;
+    width: 40px;
+    display: initial;
+  }
+  nav .nav-center .companyName {
+    font-size: 40px;
+  }
+  nav .nav-center .pageDiv {
+    height: auto;
+  }
+  nav .nav-center .pageDiv .pages {
+    display: inline-flex;
+    list-style: none;
+  }
+  nav .nav-center .pageDiv .pages a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s linear;
+  }
+  nav .nav-center .pageDiv .pages a:hover {
+    -webkit-text-decoration: wavy;
+            text-decoration: wavy;
+    color: black;
+    font-weight: bold;
+    background: #c5cfd8;
+  }
+  nav .nav-center .pageDiv .pages li {
+    padding: 0;
+    margin: 0 0.5rem;
+    list-style: none;
+    color: white;
+  }
+  nav .nav-center .pageDiv .pages li:hover {
+    padding: 0;
+    background: transparent;
+  }
+  nav .nav-center .pageDiv .pages li a {
+    color: white;
+    font-style: none;
+  }
+}/*# sourceMappingURL=index.css.map */
