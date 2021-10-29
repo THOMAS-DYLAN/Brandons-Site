@@ -1,0 +1,207 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+nav {
+  background: $secondary-3;
+  height: fit-content;
+  width: 100%;
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .nav-center {
+    width: 100%;
+    .nav-head {
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .hamburger {
+      background: transparent;
+      font-size: 1.5rem;
+      color: black;
+      border-color: transparent;
+      transition: 0.5s;
+      margin-left: 15vw;
+      &:hover {
+        transform: rotate(450deg);
+      }
+    }
+    .logo {
+      display: none;
+    }
+    .companyName{
+      font-size: 20px;
+    }
+    .pageDiv {
+      height: 0;
+      overflow: hidden;
+      &.showing {
+        height: fit-content;
+      }
+      .pages li {
+        position: absolute;
+        left: 0;
+        color: white;
+        font-size: 1rem;
+        text-transform: capitalize;
+        letter-spacing: $spacing;
+        display: block;
+        padding: 0.5rem 2rem;
+        transition: $transition;
+        position: relative;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: $black;
+            font-weight: bold;
+          }
+        }
+        &:hover {
+          padding-left: 1.5rem;
+          width: 50%;
+          font-size: 1.15rem;
+          text-decoration: solid underline;
+          text-transform: uppercase;
+          color: black;
+          font-weight: bold;
+          transition: 0.5 ease all;
+        }
+        &::after {
+          @include pseudos;
+          position: absolute;
+          bottom: 0;
+          height: 3px;
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include tablet {
+  nav {
+    width: 100%;
+    margin-right: 0.5%;
+    .nav-center {
+      width: 98%;
+      max-width: 1200px;
+      @include center-auto;
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem;
+      .nav-head {
+        padding: 0;
+      }
+      .hamburger {
+        display: none;
+      }
+      .logo{
+        display: none;
+      }
+      .companyName{
+        font-size: 1.5rem;
+      }
+      .pageDiv {
+        height: auto;
+        margin-left: -50px;
+        margin-top: 2.25vh;
+        .pages {
+          display: inline-flex;
+          list-style: none;
+          a {
+            color: white;
+            text-decoration: none;
+            transition: $transition;
+            &:hover {
+              text-decoration: wavy;
+              color: black;
+            }
+          }
+          li {
+            padding: 0;
+            margin: 0 0.2rem;
+            list-style: none;
+            font-size: 0.8rem;
+            color: white;
+            &:hover {
+              padding: 0;
+              background: transparent;
+            }
+            a {
+              color: white;
+              font-style: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@include desktop {
+  nav {
+    width: 100%;
+    margin-right: 0.5%;
+    .nav-center {
+      width: 98%;
+      max-width: 1200px;
+      @include center-auto;
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem;
+      .nav-head {
+        padding: 0;
+      }
+      .hamburger {
+        display: none;
+      }
+      .logo{
+        height: 40px;
+        width: 40px;
+        display: initial;
+      }
+      .companyName{
+        font-size: 40px;
+      }
+      .pageDiv {
+        height: auto;
+        .pages {
+          display: inline-flex;
+          list-style: none;
+          a {
+            color: white;
+            text-decoration: none;
+            transition: $transition;
+            &:hover {
+              text-decoration: wavy;
+              color: black;
+              font-weight: bold;
+            }
+          }
+          li {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0 0.5rem;
+            list-style: none;
+            color: white;
+            &:hover {
+              padding: 0;
+              background: transparent;
+            }
+            a {
+              color: white;
+              font-style: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

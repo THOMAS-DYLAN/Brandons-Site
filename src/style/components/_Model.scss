@@ -1,0 +1,13 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.model{
+  background: white;
+  border: 250px solid rgba(0, 0, 0, 0.8);
+  @include box(100%, 100vh);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: 1;
+}
