@@ -1,0 +1,14 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/variables" as *;
+@use "../util/mixins" as *;
+
+@include desktop {
+  .model {
+    height: 50vh;
+    width: 40vw;
+    border-right: 20vw solid black;
+    border-left: 20vw solid black;
+    border-top: 20vh solid black;
+    border-bottom: 20vh solid black;
+  }
+}

@@ -1,0 +1,59 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.about {
+  width: 98%;
+  margin-right: 1%;
+  margin-left: -1%;
+  margin-top: 16vh;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  .contact-about{
+    border-bottom: 2px solid black;
+    text-align: center;
+    h1{
+      font-size: 40px;
+      font-weight: bolder;
+    }
+    h2{
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .company-about{
+    h1{
+      font-size: 45px;
+      font-weight: bolder;
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    background-size: cover;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 101vw;
+    background: white;
+    margin-top: -0.05vh;
+    .company-about{
+      h1{
+        margin-top: 32.5vh;
+      }
+      p{
+        margin-top: 10vh;
+      }
+      border-left: 5px solid black;
+      border-bottom: none;
+      height: 100vh;
+      text-align: center;
+      width: 66vw;
+    }
+    .contact-about{
+      margin-top: 30vh;
+      width: 33vw;
+    }
+  }
+}

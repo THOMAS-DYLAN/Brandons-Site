@@ -1,0 +1,95 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/variables" as *;
+@use "../util/mixins" as *;
+
+@include phone {
+  .calc-main{
+    display: none;
+  }
+}
+
+@include tablet {
+  body {
+    background-color: $gray-4;
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    right: 0;
+    margin-top: -1vh;
+    .calc-main {
+      margin-top: -15vh;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 102%;
+      .calc {
+        margin-top: 30vh;
+        background-color: black;
+        color: white;
+        height: 25vh;
+        width: 100%;
+        .total {
+          font-size: 170px;
+        }
+      }
+    }
+    .calc-services {
+      display: inline-flex;
+      flex-wrap: wrap;
+      line-break: auto;
+      width: 100%;
+      .calc-service {
+        background-color: white;
+        color: black;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid black;
+        height: 30vh;
+        width: 32.94%;
+      }
+    }
+  }
+}
+
+
+@include desktop {
+  body {
+    background-color: $gray-4;
+    width: 100%;
+    height: 80vh;
+    margin-right: 5px;
+    margin-top: 0.8vh;
+    .calc-main {
+      margin-top: -7vh;
+      width: 100%;
+      .calc {
+        margin-top: 125px;
+        background-color: black;
+        color: white;
+        height: 25vh;
+        width: 100.3%;
+        .total {
+          font-size: 170px;
+        }
+      }
+    }
+    .calc-services {
+      display: inline-flex;
+      flex-wrap: wrap;
+      line-break: auto;
+      width: 100.85%;
+      .calc-service {
+        background-color: white;
+        color: black;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid black;
+        height: 25vh;
+        width: 24.7%;
+        &:hover{
+          border-left: 4px solid black;
+        }
+      }
+    }
+  }
+}
